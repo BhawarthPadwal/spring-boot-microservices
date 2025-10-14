@@ -28,6 +28,6 @@ public class QuizServiceImpl implements QuizService {
 
     @Override
     public Quiz get(Long id) {
-        return quizRepository.findById(id).orElseThrow(()->new RuntimeException(("Quiz not found")));
+        return quizRepository.findById(id).orElseThrow(() -> new RuntimeException(("Quiz not found")));
     }
 }
