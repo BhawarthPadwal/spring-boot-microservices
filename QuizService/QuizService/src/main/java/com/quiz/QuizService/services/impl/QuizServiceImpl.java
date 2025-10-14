@@ -28,7 +28,7 @@ public class QuizServiceImpl implements QuizService {
 
     @Override
     public List<Quiz> get() {
-        List<Quiz> quizzes =  quizRepository.findAll();
+        List<Quiz> quizzes = quizRepository.findAll();
         List<Quiz> newQuizList = quizzes.stream().map(quiz -> {
             quiz.setQuestions(questionClient.getQuestionOfQuiz(quiz.getId()));
             return quiz;
